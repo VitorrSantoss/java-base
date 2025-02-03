@@ -1,54 +1,15 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX29 {
   public static void main(String[] args) {
     
+    System.err.println("Informe o valor do produto a ser pago:");
     Scanner sc = new Scanner(System.in);
-
-    System.out.print("Quantos eleitores há disponíveis? ");
-    int eleitores = sc.nextInt();
-
-    int votoCand1 = 0;
-    int votoCand2 = 0;
-    int votoCand3 = 0;
-
-    for (int i =1; i<=eleitores; i++){
-
-      System.out.println("Escolha seu candidato: (1, 2 ,3):");
-      int voto = sc.nextInt();
-
-      switch (voto) {
-        case 1:
-          votoCand1 ++;
-          break;
-        case 2:
-        votoCand2++;
-          break;
-        case 3:
-        votoCand3++;
-          break;
-        default:
-          System.out.println("Voto inválido! Tente novamente.");  
-          break;
-      }
-      
-
-    }
+    double produto = sc.nextDouble();
     sc.close();
-    
-    System.out.printf("Qtd Candidato 1: %d votos\n", votoCand1);
-    System.out.printf("Qtd Candidato 2: %d votos\n", votoCand2);
-    System.out.printf("Qtd Candidato 3: %d votos\n", votoCand3);
-
-
-
-
-
-
-
-
+    double prestacao = produto/5;
+    System.err.printf("Com R$ %.2f em 5 prestações, o valor a ser pago será R$ %.2f", produto, prestacao);
 
   }
 }

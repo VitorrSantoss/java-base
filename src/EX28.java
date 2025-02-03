@@ -1,43 +1,17 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX28 {
   public static void main(String[] args) {
     
+    System.out.println("Informe o valor a ser depositado:");
     Scanner sc = new Scanner(System.in);
-    System.out.println("ANÁLISE DE IDADES:");
+    double real = sc.nextDouble();
+    sc.close(); 
+    double renda = real  * (0.50/100);
+    System.out.printf("Após o 1º mês com juros de 0.50%%, o valor é: R$ %.2f\nTotal: R$ %.2f", renda, renda+real);
 
-    double contIdade = 0;
-    int i =1;
-    double soma = 0;
-  
-    System.out.println("Regristre sua idade: ");
 
-    while (true){
-      System.out.printf("%dª Idade: ", i++);
-      int idade = sc.nextInt();
-      if (idade == -1){
-        break;
-      }
-
-      contIdade = contIdade +1;
-      soma = soma + idade;
-
-    }
-    sc.close();
-    double media = soma / contIdade;
-    System.out.println("Média das idades: " + media);
-    
-    if (media > 0 && media <=25){
-      System.out.println("Turma é Jovem");
-    }
-    else if (media >26 && media <=60){
-      System.out.println("Turma Adulta");
-    }
-    else if (media > 60){
-      System.out.println("Turma Idosa");
-    }
 
   }
 }

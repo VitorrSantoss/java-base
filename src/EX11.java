@@ -1,35 +1,17 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX11 {
+
   public static void main(String[] args) {
-    
+    System.out.println("Informe a base do triângulo:");
     Scanner sc = new Scanner(System.in);
-    System.out.print("1º Valor: ");
-    int num1 = sc.nextInt();
-    System.out.print("2º Valor: ");
-    int num2 = sc.nextInt();
+    double base = sc.nextDouble();
+    System.out.println("Infome a altura do triângulo:");
+    double altura = sc.nextDouble();
     sc.close();
-
-    int inicio, fim;
-
-    if (num1 < num2){
-      inicio = num1;
-      fim = num2;
-    }
-    else{
-      inicio = num2;
-      fim = num1;
-    }
-    
-    int soma =0;
-
-    for (int j = inicio +1; j<fim; j++){
-      System.out.println(j);
-      soma = soma + j;
-    } 
-    System.out.println(soma);
-
+    // CÁLCULO:
+    double conta = (base * altura)/2;
+    System.err.printf("A área do triângulo de base %.2f e altura de %.2f é %.2f", base, altura, conta);
   }
 }

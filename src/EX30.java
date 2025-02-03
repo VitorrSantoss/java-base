@@ -1,38 +1,35 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX30 {
   public static void main(String[] args) {
-        
+    
+    System.out.println("Informe seu nome:");
     Scanner sc = new Scanner(System.in);
-
-    int i = 1;
-    int somaAluno = 0;
-    int qtdTurma = 0;
-
-    while (true){
-      System.out.printf("%dª turma. Quantos alunos há? ", i++);
-      int aluno = sc.nextInt();
-      
-      if (aluno == -1){
-        break;
-      }
-      else if (aluno >= 40){
-        System.out.println("Número inválido de alunos. Cada sala comporta menos de 40 alunos!");
-        System.out.println("Digite novamente!");
-        continue;
-      }
-      else if (aluno < 40){
-        qtdTurma = qtdTurma +1;
-        somaAluno = somaAluno + aluno;
-      }
-    }
+    String nomeVendedor = sc.nextLine();
+    System.out.println("Informe seu salário fixo:");
+    double salarioFixo = sc.nextDouble();
+    System.out.println("Informe o total de vendas em R$:");
+    double totalVendas = sc.nextDouble();
+    System.out.println("Informe sua comissão em R$:");
+    double comissao = totalVendas * 0.15;
+    double salarioLiquido = salarioFixo + comissao;
     sc.close();
 
-    System.out.println("Qtd turmas registradas: " + qtdTurma);
-    System.out.println("Alunos Registrados: " + somaAluno);
-    System.out.println("Média de aluno por turma: " + somaAluno / qtdTurma);
+    System.err.printf("Nome: %s\nSalário fixo: R$ %.2f\nTotal de vendas: R$ %.2f\nComissão: R$ %.2f\nSalário Líquido: R$ %.2f", nomeVendedor, salarioFixo, totalVendas, comissao, salarioLiquido);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   }
 }

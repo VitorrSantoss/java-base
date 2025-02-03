@@ -1,38 +1,21 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX31 {
   public static void main(String[] args) {
     
     Scanner sc = new Scanner(System.in);
-
-    int i = 1;
-    int unidadeCD = 0;
-    double dinheiroCD = 0;
-
-    while (true){
-
-      System.out.printf("%dº CD: R$ ", i++);
-      double valorCD = sc.nextDouble();
-
-
-      if (valorCD <= -2){
-        System.out.println("Valor inválido! Digite novamente!");
-        continue;
-      }
-      else if (valorCD == -1){
-        break;
-      }
-
-      dinheiroCD = dinheiroCD + valorCD;
-      unidadeCD = unidadeCD +1;
-    }
+    System.out.println("Informe sua idade em anos:");
+    int anos = sc.nextInt();
+    System.out.println("Informe sua idade em meses:");
+    int meses = sc.nextInt();
+    System.out.println("Informe sua idade em dias:");
+    int dias = sc.nextInt();
     sc.close();
 
-    System.out.println("Qtd CD: " + unidadeCD);
-    System.out.println("Valor Total: R$ " + dinheiroCD);
-    System.out.println("Valor Médio por CD: R$ " + dinheiroCD/unidadeCD);
+    int idade = (anos * 360) + (meses * 30) + dias;
+    System.out.printf("Sua idade em dias é: %d", idade);
+  
 
   }
 }

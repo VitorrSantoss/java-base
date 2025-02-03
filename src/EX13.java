@@ -1,28 +1,16 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX13 {
   public static void main(String[] args) {
+    System.out.println("Informe a altura do retângulo:");
     Scanner sc = new Scanner(System.in);
-    System.out.println("Como calcular uma potência");
-    System.out.print("Digite um número para ser a base: ");
-    int base = sc.nextInt();
-    System.out.print("Digite um número para ser o expoente: ");
-    int expoente = sc.nextInt();
+    double altura = sc.nextDouble();
+    System.out.println("Informe a largura do retângulo:");
+    double largura = sc.nextDouble();
     sc.close();
-
-    int resultado = 1;
-    for (int i = 0; i<expoente; i++){
-      resultado = resultado * base;
-    }
-    System.out.println(resultado);
-
-
-
-
-
-
-
+    // CÁLCULO
+    double area = largura * altura;
+    System.err.printf("A área do retângulo é: %.2f", area);
   }
 }

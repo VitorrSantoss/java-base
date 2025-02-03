@@ -1,24 +1,16 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX15 {
   public static void main(String[] args) {
-    
+    System.out.println("Sobre o Cone...\nInforme o raio da base:");
     Scanner sc = new Scanner(System.in);
-    System.out.println("Quantas notas você deseja inserir?");
-    double qtdNotas = sc.nextDouble();
-
-    double soma=0;
-    
-    for (int i =0; i<qtdNotas; i++){
-      System.out.printf("%dº Nota:", i+1);
-      double nota = sc.nextDouble();
-      soma = soma + nota;
-    }
+    double raioBase = sc.nextDouble();
+    System.out.println("Informe a altura:");
+    double altura = sc.nextDouble();
     sc.close();
-  System.out.printf("SOMA: %.1f\n", soma);
-  System.out.printf("MÉDIA: %.1f\n", soma/qtdNotas);
-
+    //  CONTA
+    double volume = (3.14 * Math.pow(raioBase, 2) * altura)/3;
+    System.out.printf("O volume do cone é: %.2f", volume);
   }
 }

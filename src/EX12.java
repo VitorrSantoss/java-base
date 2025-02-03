@@ -1,55 +1,17 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX12 {
   public static void main(String[] args) {
-
+    System.out.println("Informe o raio da base do cinlindro:");
     Scanner sc = new Scanner(System.in);
-    System.out.print("Digite um número:");
-    int num = sc.nextInt();
-    
-
-    System.out.print("Qual Operação Matemática você deseja?\n[1] SOMAR\n[2] SUBTRAIR\n[3] MULTIPLICAR\n[4] DIVIDIR\n");
-    int decisao = sc.nextInt();
+    double raioBase = sc.nextDouble();
+    System.out.println("Infomre a altura do cilindro:");
+    double altura = sc.nextDouble();
     sc.close();
-
-    if (decisao==1){
-      for (int i = 1; i <= 10; i++){
-        System.out.printf("%d + %d = %d\n", num, i, num+i);
-      }
-    }
-    else if(decisao==2){
-      for (int i = 1; i <= 10; i++){
-        System.out.printf("%d - %d = %d\n", num, i, num-i);
-      }
-    }
-    else if(decisao==3){
-      for (int i = 1; i <= 10; i++){
-        System.out.printf("%d x %d = %d\n", num, i, num*i);
-      }
-    }
-    else if(decisao==4){
-      for (int i = 1; i <= 10; i++){
-        System.out.printf("%d / %d = %d\n", num, i, num/i);
-      }
-    }
-    else{
-      System.out.println("CÓDIGO INVÁLIDO!");
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // CÁLCULO:
+    double volume = 3.14 * altura * Math.pow(raioBase, 2);
+    System.out.printf("Com os dados informados o CILINDRO possui...\nAltura: %.2f\n Raio da base %.2f\nVolume: %.2f",altura, raioBase, volume);
   }
+  
 }

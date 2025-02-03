@@ -1,17 +1,15 @@
-package src.src;
+package src;
+import java.util.Scanner;
 
 public class EX06 {
   public static void main(String[] args) {
-    
-    int i = 1;
-    while (i <=20){
-      System.out.print(i + " ");
-      i++;
-    } 
-
-    for (int j =1; j<=20; j++ ){
-      System.out.print(j + " ");
-    }
+    System.out.println("Infome o raio do circulo:");
+    Scanner sc = new Scanner(System.in);
+    double raio = sc.nextDouble();
+    sc.close();
+    // CÁLCULO
+    double areaCirculo = 3.14 * Math.pow(raio, 2);
+    System.out.printf("A área do circulo é %.2f", areaCirculo);
 
   }
 }

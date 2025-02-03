@@ -1,49 +1,17 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX27 {
   public static void main(String[] args) {
     
+    System.out.println("CONVERSOR DE MOEDA: R$ -> US$\nR$ 1,00 -> US$ 0,16\nUS$ 1,00 -> R$ 6,11");
+    System.err.println("Informe o valor a ser convertido para Dóllar:");
     Scanner sc = new Scanner(System.in);
-
-    System.out.println("Média de N notas: ");
-
-    int i = 1;
-    int soma = 0;
-    int qtdNota = 0;
-
-    while (true){
-      System.out.printf("%dª Nota: ", i++);
-      int nota = sc.nextInt();
-
-      if (nota == -1){
-        break;
-      }
-
-      soma = soma + nota;
-      qtdNota = qtdNota +1;
-
-
-    }
+    double real = sc.nextDouble();
     sc.close();
-
-    System.out.printf("Soma: %d\n", soma);
-    System.out.printf("Média: %d", soma/qtdNota);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // COTAÇÃO!
+    double cotacao = real/6.11;
+    System.out.printf("Com R$ %.2f você terá US$ %.2f", real, cotacao);
 
   }
 }

@@ -1,36 +1,15 @@
-package src.src;
+package src;
+import java.util.Scanner;
 
 public class EX09 {
   public static void main(String[] args) {
-    
-    int i =1;
-    while (i <=50){
-      if (i %2 !=0){
-        System.out.print(i + " ");
-      }
-     i++; 
-    }
-
-    for (int j =1; j<=50; j++){
-      if (j %2 !=0){
-        System.out.print(j + " ");
-      }
-    }
-
-    //////////////////////////////////////////////////////////////
-    
-    int k =1;
-    while (k<=50) {
-      System.out.print(k + " ");
-      k = k +2;
-    }
-
-    for (int l = 1; l <=50; l+=2){
-      System.out.print(l + " ");
-    }
-
-
-
-
+    System.out.println("Informe a temperatura em Fahrenheit:");
+    Scanner sc = new Scanner(System.in);
+    double fahrenheit = sc.nextDouble();
+    sc.close();
+    // CONVERSÃO
+    double celsius = 5 *((fahrenheit - 32)/9);
+    System.out.printf("A temperatura em Celsius é %.2fº", celsius);
   }
+
 }

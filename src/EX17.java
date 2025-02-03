@@ -1,26 +1,17 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX17 {
   public static void main(String[] args) {
-
+    System.out.println("Vamos verificar o peso ideal para sua altura!\nInforme sua altura: ");
     Scanner sc = new Scanner(System.in);
-    System.out.print("Fatorial: ");
-    int num = sc.nextInt();
+    double altura = sc.nextDouble();
     sc.close();
+    // CONTA 
+    double pesoIdeal = (72.7 * altura)-58;
+    System.out.printf("O peso ideal para sua altura é: %.2f", pesoIdeal);
 
-    int fatorial =1;
-    if (num>=0 && num <=16){
-      for (int i=1; i<=num; i++){
-        fatorial = fatorial *i;
-      }
 
-      System.out.printf("%d! = %d", num, fatorial);
-    } 
-    else{
-      System.out.println("Valor Inválido");
-    }
 
-  } 
+  }
 }

@@ -1,22 +1,13 @@
-package src.src;
-
+package src;
 import java.util.Scanner;
 
 public class EX02 {
+
   public static void main(String[] args) {
-    
-    Scanner sc  =  new Scanner(System.in);
-    System.out.print("Usuário: ");
-    String user = sc.nextLine();
-    System.out.print("Senha: ");
-    String password = sc.nextLine();
-
-    while (password.equals(user)){
-      System.out.println("Senha Inválida! Digite uma nova senha.");
-      password = sc.nextLine();
-    }
+    System.out.println("Digite um número: ");
+    Scanner sc = new Scanner(System.in);
+    double numero = sc.nextDouble();
     sc.close();
-    System.out.println("Senha Aprovada!");
-
+    System.out.printf("O número informado foi %.2f", numero);
   }
 }
